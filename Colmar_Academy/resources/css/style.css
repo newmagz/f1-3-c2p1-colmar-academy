@@ -1,0 +1,382 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #7CAEE7;
+}
+nav {
+  display: flex;
+  height: 64px;
+}
+h1,h2,h3,h4,p{
+  color: #595959;
+  margin: 0px;
+}
+h1 {
+  font-size: 2.4em;
+  line-height: 1.3em;
+  font-weight: bold;
+  margin-bottom: 32px;
+  margin-top: 0px;
+}
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+h4 {
+  font-size: 1.4em;
+  margin-bottom: 24px;
+}
+button {
+  background: #595959;
+  width: 100%;
+  padding: 8px 0;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.desktop {
+  display: none;
+}
+.mobile {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+}
+.navigation {
+  align-items: center;
+}
+nav li {
+  list-style: none;
+  display: flex;
+}
+nav li > a {
+  color: black;
+}
+img, video {
+  width: 100%;
+  height: auto;
+}
+.featured-events p{
+  color: #8E8E8E;
+}
+.practice {
+  display: none;
+}
+.banner {
+  width: 100%;
+  height: 250px;
+  background: url('../images/banner.jpg');
+  background-size: cover;
+}
+.banner img {
+  display: none;
+}
+.start-here {
+  background-color: #DBDBDB;
+  padding: 32px 16px;
+}
+.campus, .orientation {
+    padding-bottom: 64px;
+}
+p.author{
+padding: 16px 0;
+}
+.information {
+  padding: 16px 16px 32px;
+  border-bottom: 1px solid #D8D8D8;
+}
+.information-text {
+    padding: 8px 16px;
+    line-height: 1.5em;
+    width: 65%;
+}
+.information-text h3, .information-text p {
+  margin-bottom: 8px;
+}
+.practice-thumb {
+  height: 150px;
+  overflow: hidden;
+}
+
+/*adjusts for dektop compatibility around this width*/
+@media only screen and (min-width: 800px) {
+  .learn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #D8D8D8;
+  }
+  .banner {
+    background: none;
+    height: auto;
+    width: 60%;
+    margin: 32px 0px 32px 24px;
+  }
+  .banner img {
+    display: flex;
+  }
+  .start-here {
+    width: 40%;
+    margin-left: 24px;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  h4 {
+    font-size: 2.4em;
+  }
+  button {
+      margin-top: 95px;
+      max-width: 570px;
+      font-size: 2.4em;
+  }
+  .information {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  .practice {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 32px 24px;
+  }
+  .practice img {
+    min-height: 350px;
+  }
+  .practice h2 {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+  .practice-thumb {
+    height: auto;
+  }
+  .orientation, .campus, .guest-lecture {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 16px;
+    max-width: 100%;
+  }
+  .guest-lecture {
+    background-color: #d8d8d8;
+}
+picture.event-image{
+  width: 35%;
+  padding: 16px;
+}
+  .featured-events div:first-child {
+    margin-top: 16px;
+  }
+  .information div:nth-child(n+2) {
+    border-top: none;
+  }
+  .featured-events {
+    width: 40%;
+    border-left: 1px solid #d8d8d8;
+    padding-bottom: 32px;
+  }
+  blockquote > footer {
+    margin-top: 32px;
+  }
+}
+/*non media query*/
+.classes {
+  padding: 32px 16px;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.classes h2, .exhibition-featured h2 {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.classes img, .classes .course-info p {
+  display: none;
+}
+
+.course-info  h3 {
+  padding: 16px 0px 24px 16px;
+  background-color: #D8D8D8;
+  margin-bottom: 8px;
+  margin-top: 0px;
+}
+
+/*adjusts for mobile display around this breakpoint*/
+@media only screen and (min-width: 550px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+    margin-left: 24px;
+    padding-left: 0;
+    width: 100%;
+  }
+  .logo {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  .logo a {
+    display: flex;
+    align-items: center;
+  }
+  .logo span {
+    font-weight: bold;
+  }
+  nav li:nth-child(n+1) {
+    margin-right: 16px;
+  }
+  nav li:last-child {
+    margin-right: 24px;
+  }
+  .classes {
+    background-color: #D8D8D8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .classes img, .classes .course-info p {
+    display: flex;
+  }
+  .classes img {
+    height: 154px;
+  }
+  .course-info h3, .course-info {
+    background: #ffffff;
+  }
+  .course-info p {
+    padding: 0 16px 8px;
+  }
+  .course-info p:last-child {
+    padding: 0 16px 24px;
+  }
+  .course-card {
+    width: 350px;
+    margin-right: 32px;
+    margin-bottom: 24px;
+  }
+  .course-info {
+    height: 195px;
+  }
+}
+/*non media query*/
+.recent-exhibits, .exhibit-vid h3, .exhibit-vid p {
+  display: none;
+}
+
+.exhibition-featured h2 {
+padding: 32px 0 16px 0;
+margin: 0px;
+}
+
+/*Adjusts some breakpoints around this width*/
+@media only screen and (min-width: 750px) {
+  .recent-exhibits {
+    display: block;
+  }
+  .exhibition-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 24px;
+    margin-bottom: 32px!important;
+  }
+  .exhibition-featured h2 {
+    padding: 32px 0 32px 0;
+    margin: 0px;
+    font-size: 2.5em;
+}
+  .exhibit-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: auto;
+  }
+  .exhibit-card img {
+    width: 35%;
+    margin: 16px;
+  }
+  .exhibit-info {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+  .exhibit-card:first-child {
+    background: #D8D8D8;
+  }
+  .exhibit-vid {
+    margin-right: 24px;
+    width: 60%;
+  }
+  .exhibit-vid h3, .exhibit-vid p {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+  }
+}
+
+/*non media query*/
+.exhibition-container {
+  margin-bottom: 24px;
+}
+footer > nav {
+  display: none;
+}
+
+footer p{
+  font-size: 0.6em;
+}
+
+footer {
+  padding: 16px 0;
+}
+
+.copyright {
+  margin-left: 24px;
+}
+/*Adjusts for small mobile compatibility*/
+@media only screen and (min-width: 400px) {
+  .start-here{
+    background-color: transparent;
+  }
+  footer {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #D8D8D8;
+  }
+  footer p {
+    font-size: 1em;
+}
+  footer > nav {
+    display: flex;
+  }
+  footer > nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    font-size: 1em;
+  }
+  footer > nav ul li:first-child {
+    margin-right: 16px;
+  }
+}
